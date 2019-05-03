@@ -1,0 +1,20 @@
+\chapter{Existing software}
+\label{chp:existing_software}
+
+Here we overview some of the existing software which is available to any programmer who wishes to start explicitly implementing reduced-precision or vectorised code for use in their own applications. 
+
+\section{Libraries and compilers}
+\label{sec:libraries_and_compilers}
+
+	There are several resources already available designed to facilitate vectorised arithmetic and support low-precision operations. A non exhaustive list includes:
+	
+	\begin{description}
+		\item[\href{http://half.sourceforge.net/}{Half\index{Half}}] 
+			A half-precision\index{Half-precision} floating-point\index{Floating-point} library. This is a C++\index{C++} header file allowing for arithmetic operations, type conversions, and common mathematical functions. For performance reasons much of the functionality of the library relies on converting from half-precision to single-precision\index{Single-precision}, performing the operations in single-precision, and then casting\index{Type casting} the results back down to half-precision.
+			
+		\item[\href{http://sleef.org/}{SLEEF\index{SLEEF}}]
+			An implementation of vectorised versions of all C99\index{C99} real floating-point\index{Floating-point} maths functions. This contains subroutines for single and double-precision for variable accuracy or speed requirements.
+			
+	\end{description}
+
+\clearpage

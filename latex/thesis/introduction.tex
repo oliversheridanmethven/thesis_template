@@ -1,0 +1,55 @@
+\chapter{Introduction}
+\label{chp:introduction}
+
+In this \namecref{chp:introduction} we provide some light background material introducing vectorised arithmetic and reduced-precision calculations. We then highlight some motivating applications driving this research, and relevant literature surrounding the topic. We finish with an outline of the topics discussed in this thesis. 
+
+\section{Background}
+\label{sec:background}
+
+    The remit of this thesis is very wide in nature, covering both the practicalities of producing high-performance code, and the mathematical analysis associated with using vectorised and reduced-precision capable hardware. This thesis is intended for a reader with a high level of mathematical knowledge, and so we assume a reasonable degree of familiarity with topics including stochastic calculus, Monte Carlo methods, and similar areas. However, we do not expect the reader to necessarily have much knowledge of the low level details underlying the execution of computer programs at both a programming and hardware level. Consequently,  we will introduce these topics more gradually and with less familiarity assumed. We only briefly introduce the notions of \textit{vectorised arithmetic}\index{Vectorised arithmetic} and \textit{reduced-precision}\index{Reduced-precision}.
+    
+\subsection{Introduction to vectorised arithmetic}
+\label{subsec:introduction_to_vectorised_arithmetic}
+
+    \begin{figure}[htb]
+        \missingfigure{example}
+        \caption[example missing figure]{example missing figure}
+    \end{figure}
+
+    \begin{table}[htb] \centering
+        \begin{tabular}{cc}
+            a & b \\ \hline
+            c & d
+        \end{tabular}
+    \caption[an example table]{example table}
+    \end{table}
+
+\begin{lstfloat}[!htb]
+\begin{lstlisting}[language=C, caption={[Cubic]An application of Horner's rule.}, label=code:c:piecewise_cubic_approximation_horners_rule_polynomial_splitting, captionpos=b]
+#pragma omp declare simd
+static inline float polynomial_approximation(float u, unsigned int index)
+{   /* Horner's rule using even and odd polynomials. */
+    float z, z_even, z_odd;
+    float u_squared = u * u;
+    z_even = a_0[index] + a_2[index] * u_squared;
+    z_odd  = a_1[index] + a_3[index] * u_squared;
+    z = z_even + z_odd * u;
+    return z;
+}
+\end{lstlisting}
+\end{lstfloat}
+
+\begin{algorithm}[htb]
+    \DontPrintSemicolon
+    \KwIn{Floating point uniform random number $ U \in [0, 1) $.}
+    \KwOut{Floating point approximate Gaussian random number $ \tilde{Z} $.}
+    Form predicate based on whether $ U > \tfrac{1}{2} $.\;
+    Reflect about $ \tfrac{1}{2} $ to obtain $ U \to [0, \tfrac{1}{2}) $.\;
+    \caption[Polynomial]{polynomial approximation.}
+    \label{algo:polynomial}
+\end{algorithm}
+
+    \lipsum 
+
+\clearpage
+

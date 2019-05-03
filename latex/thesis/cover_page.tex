@@ -1,0 +1,66 @@
+% The cover page is a designed to look best on A4 and is designed to be a
+% "What you see is what you get".
+\thispagestyle{empty} % 'gobble' pagestyle throws issues with nomencl package. 
+\afterpage{
+\pagestyle{empty}
+\newgeometry{left = 30mm, right = 20mm, top = 15mm, bottom = 20mm}
+\begin{center}
+
+\begin{figure}[h]
+\centering
+\vspace{0.02\paperheight}
+\includegraphics[width=0.3\linewidth]{oxford_logo_blue} \\
+\vspace{0.01\paperheight}
+\begin{tabular}{@{}>{\hfill}p{0.45\linewidth}@{}@{}p{0.03\linewidth}@{}@{}p{0.45\linewidth}@{}}
+%	\hline
+\includegraphics[width=0.95\linewidth,valign=T]{infomm_logo_blue}  & \hfill &
+\includegraphics[width=0.75\linewidth, valign=T]{epsrc_logo} \\
+%\hline
+\hfill \includegraphics[width=0.6\linewidth, valign=T]{arm_logo_blue} 
+& &
+\includegraphics[width=0.48\linewidth, valign=T]{nag_logo_blue} 
+\\ 
+%\hline
+\end{tabular}
+
+\end{figure}
+\begin{Large}
+\rule{\linewidth}{1pt} \\
+\textbf{My thesis} \\
+\rule{\linewidth}{1pt}
+\end{Large}
+
+\begin{large}
+Oliver Sheridan-Methven\\
+\href{mailto:oliver.sheridan-methven@maths.ox.ac.uk}{oliver.sheridan-methven@maths.ox.ac.uk} \\
+Mansfield College\\
+\vspace{0.02\paperheight}
+July 2018 \\
+\vspace{0.02\paperheight}
+\begin{table}[h]
+\center
+\large
+Supervisors: \\
+\vspace{1ex}
+\begin{tabular}{l@{\hskip2cm} r}
+ Prof.\,Michael Giles & Oxford \\
+ Dr\,Christopher Goodyer        & \arm
+\end{tabular}
+\end{table}
+%A thesis submitted for the degree of \\
+%\textit{Doctor of Philosophy} \\
+%as part of centre for doctoral training in \\
+%\textit{Industrially Focused Mathematical Modelling.}\\
+\end{large}
+\vfill
+\begin{LARGE}
+\textbf{TRANSFER THESIS}
+\end{LARGE}
+\vfill
+\end{center}
+\restoregeometry
+\clearpage
+}
+\restoregeometry
+\clearpage
+%\cleardoublepage

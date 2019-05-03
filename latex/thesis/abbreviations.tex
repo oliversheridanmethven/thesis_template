@@ -1,0 +1,41 @@
+\chapter*{Conventions and abbreviations}
+%\label{sec:conventions_and_abbreviations}
+\addcontentsline{toc}{chapter}{Conventions and abbreviations}
+\markboth{Conventions and abbreviations}{Conventions and abbreviations}
+
+\section*{Conventions}
+
+In much of the code presented we will largely be using C\index{C}. While there are various standards available we will typically present code that is intended to adhere to the C11\index{C11} standard. Furthermore, there are a large number of different compilers available for C. To facilitate ease of reproducing and running any code presented, we will assume that the code is compiled using the freely available GNU C compiler \texttt{gcc}\index{gcc@{\texttt{gcc}}}. We will make clear when this is not the case, or if any compiler flags have been set. 
+
+If we should present any assembly code, then we will try to adopt the \intel\index{Intel@{\intel}} syntax in preference to the AT\&T\index{ATandT@{AT\&T}} syntax. While \texttt{gcc} will default to using the later, we believe that the former is easier to read and understand. 
+
+\section*{Abbreviations}
+
+\begin{center}
+	\footnotesize
+{\renewcommand{\arraystretch}{0.8}% for the vertical padding        
+\begin{tabularx}{\textwidth}[htb]{@{}l >{\hangpara{15mm}{1}}X@{}}
+\caption*{Common abbreviations.} 
+\addcontentsline{lot}{table}{\numberline{}Common abbreviations}
+\label{tab:common_abbreviations}
+\endfirsthead
+\hline
+\endhead
+\hline \multicolumn{2}{c}{\textit{Continued on the next page}}\\
+\endfoot
+\hline
+\endlastfoot
+\hline 
+	AArch64 & \arm 64-bit architecture \\
+	ABI & Application binary interface \\
+	AES & Advanced encryption standard \\
+	AGU & Address generating unit \\
+	AL & Assembly language \\
+	ALU & Arithmetic logical unit \\
+	AMP & Asymmetric multi-processing \\
+	ANSI & American national standards institute \\
+    ARM & (Advanced RISC machines) \\
+    ZAXPY & Complex long-precision $ \texttt{a*x + y} $
+\end{tabularx}}
+\end{center}
+\clearpage
